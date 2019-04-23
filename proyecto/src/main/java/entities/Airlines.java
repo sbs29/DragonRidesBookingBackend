@@ -6,46 +6,44 @@ import javax.persistence.Id;
 
 @Entity
 public class Airlines {
-	
-	@Id
-	private Long AirlineId;
 
+	@Id
+	private Long airlineId;
 	@Column
-	private String AirlineName;
-	
+	private String ailineName;
 	@Column
-	private String AirlineImage;
+	private String airlineImage;
 	
-	public Airlines() {
-	}
+	public Airlines() {}
 
 	public Long getAirlineId() {
-		return AirlineId;
-	}
-	
-	public void setAirlineId(Long AirlineId) {
-		this.AirlineId = AirlineId;
+		return airlineId;
 	}
 
-	public String getAirlineName() {
-		return AirlineName;
+	public void setAirlineId(Long airlineId) {
+		this.airlineId = airlineId;
 	}
 
-	public void setAirlineName(String AirlineName) {
-		this.AirlineName = AirlineName;
+	public String getAilineName() {
+		return ailineName;
+	}
+
+	public void setAilineName(String ailineName) {
+		this.ailineName = ailineName;
 	}
 
 	public String getAirlineImage() {
-		return AirlineImage;
+		return airlineImage;
 	}
 
-	public void setAirlineImage(String AirlineImage) {
-		this.AirlineImage = AirlineImage;
+	public void setAirlineImage(String airlineImage) {
+		this.airlineImage = airlineImage;
 	}
 
 	@Override
 	public String toString() {
-		return "Airlines [AirlineId=" + AirlineId + ", AirlineName=" + AirlineName + ", AirlineImage=" + AirlineImage + "]";
+		return "Airlines [airlineId=" + airlineId + ", ailineName=" + ailineName + ", airlineImage=" + airlineImage
+				+ "]";
 	}
 	
 }
