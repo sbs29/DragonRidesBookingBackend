@@ -1,0 +1,11 @@
+body
+{
+    background-color: black; /*hola*/
+    color: white; 
+}
+
+table {
+	width: 40%;
+	height: 250px;
+}
+caption { font-size: 150% }

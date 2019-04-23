@@ -1,0 +1,28 @@
+body
+{
+    background-color: black; /*hola*/
+    color: white; 
+}
+
+table {
+	margin: auto;
+	width: 5%;
+	height: 40px;
+	border-collapse: collapse;
+	
+}
+
+td { 
+     padding: 5px 10px;
+     text-align: center;
+     border: 1px solid #999;
+}
+body{
+ width:auto;margin:auto
+}
+
+
+    
+    
+}
+  
