@@ -8,28 +8,28 @@ import javax.persistence.Id;
 public class Airlines {
 
 	@Id
-	private Long airlineId;
+	private Long id;
 	@Column
-	private String ailineName;
+	private String airlineName;
 	@Column
 	private String airlineImage;
 	
 	public Airlines() {}
 
-	public Long getAirlineId() {
-		return airlineId;
+	public Long getId() {
+		return id;
 	}
-
-	public void setAirlineId(Long airlineId) {
-		this.airlineId = airlineId;
+	
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getAilineName() {
-		return ailineName;
+		return airlineName;
 	}
 
-	public void setAilineName(String ailineName) {
-		this.ailineName = ailineName;
+	public void setAilineName(String airlineName) {
+		this.airlineName = airlineName;
 	}
 
 	public String getAirlineImage() {
@@ -42,8 +42,7 @@ public class Airlines {
 
 	@Override
 	public String toString() {
-		return "Airlines [airlineId=" + airlineId + ", ailineName=" + ailineName + ", airlineImage=" + airlineImage
-				+ "]";
+		return "Airlines [id=" + id + ", airlineName=" + airlineName + ", airlineImage=" + airlineImage + "]";
 	}
 	
 }

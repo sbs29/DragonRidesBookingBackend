@@ -11,10 +11,6 @@ public class Booking {
 	private Long id;
 	@Column
 	private String user;
-	@Column
-	private String flightId;
-	@Column
-	private Long offer;
 	
 	public Booking() {}
 	
@@ -31,24 +27,12 @@ public class Booking {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	
-	public String getFlightId() {
-		return flightId;
-	}
-	public void setFlightId(String flightId) {
-		this.flightId = flightId;
-	}
-	
-	public Long getOffer() {
-		return offer;
-	}
-	public void setOffer(Long offer) {
-		this.offer = offer;
-	}
 
 	@Override
 	public String toString() {
-		return "Booking [id=" + id + ", user=" + user + ", flightId=" + flightId + ", offer=" + offer + "]";
+		return "Booking [id=" + id + ", user=" + user + "]";
 	}
+
+	
 	
 }

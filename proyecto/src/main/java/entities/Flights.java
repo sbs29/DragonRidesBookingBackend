@@ -11,7 +11,7 @@ import java.util.Date;
 public class Flights {
 
 	@Id
-	private String flightId;
+	private Long id;
 //	@Column
 //	private Long flightId;
 	@Column
@@ -31,11 +31,12 @@ public class Flights {
 	
 	public Flights() {}
 	
-	public String getFlightId() {
-		return flightId;
+	
+	public Long getId() {
+		return id;
 	}
-	public void setFlightId(String flightId) {
-		this.flightId = flightId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public Long getAirline() {
 		return airline;
@@ -82,9 +83,8 @@ public class Flights {
 
 	@Override
 	public String toString() {
-		return "Flights [flightId=" + flightId + ", airline=" + airline + ", arrivalDate=" + arrivalDate
-				+ ", arrivalTime=" + arrivalTime + ", destination=" + destination + ", departureDate=" + departureDate
-				+ ", departureTime=" + departureTime + ", price=" + price + "]";
+		return "Flights [id=" + id + ", airline=" + airline + ", arrivalDate=" + arrivalDate + ", arrivalTime="
+				+ arrivalTime + ", destination=" + destination + ", departureDate=" + departureDate + ", departureTime="
+				+ departureTime + ", price=" + price + "]";
 	}
-	
 }
