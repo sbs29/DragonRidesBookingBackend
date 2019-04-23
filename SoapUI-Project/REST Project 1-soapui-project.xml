@@ -125,4 +125,4 @@ if( requestBody.contains("some data") )
     return "Response N"
 }
 */
-</con:dispatchPath><con:response name="ResponseCityDiscount" id="bac0b02d-610f-457f-92b9-769533200a96" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{ "city": "White Harbor", "discount": 99 }</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</con:dispatchPath><con:response name="ResponseCityDiscount" id="bac0b02d-610f-457f-92b9-769533200a96" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>[{ "city": "White Harbor", "discount": 99 }]</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
