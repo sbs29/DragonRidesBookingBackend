@@ -19,6 +19,10 @@ public class Airlines {
 	public Airlines() {
 	}
 
+	public Long getAirlineId() {
+		return AirlineId;
+	}
+	
 	public void setAirlineId(Long AirlineId) {
 		this.AirlineId = AirlineId;
 	}
