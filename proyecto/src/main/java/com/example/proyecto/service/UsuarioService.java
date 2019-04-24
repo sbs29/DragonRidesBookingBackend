@@ -1,18 +1,18 @@
 package com.example.proyecto.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import com.example.proyecto.entity.Login;
 import com.example.proyecto.repository.LoginRepository;
-import com.example.proyecto.repository.Repositorio;
 
 @Service
 public class UsuarioService extends AbstractService<Login> {
 
 	@Autowired
 	public void setRepositorio(LoginRepository loginRepository) {
-		this.repositorio = (Repositorio<Login>) loginRepository;
+		this.repositorio = (CrudRepository<Login, Long>) loginRepository;
 
 	}
 
