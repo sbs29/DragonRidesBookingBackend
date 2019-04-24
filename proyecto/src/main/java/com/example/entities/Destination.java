@@ -5,14 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Destinations {
+public class Destination {
 
 	@Id
 	private Long id;
 	@Column
 	private String name;
 	
-	public Destinations() {}
+	public Destination() {}
 
 	public Long getId() {
 		return id;

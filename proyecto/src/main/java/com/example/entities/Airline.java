@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Airlines {
+public class Airline {
 
 	@Id
 	private Long id;
@@ -14,7 +14,7 @@ public class Airlines {
 	@Column
 	private String airlineImage;
 	
-	public Airlines() {}
+	public Airline() {}
 
 	public Long getId() {
 		return id;

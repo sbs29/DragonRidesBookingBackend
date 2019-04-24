@@ -9,6 +9,8 @@ import javax.persistence.Id;
 @Entity
 public class User extends AbstractEntity {
 
+	private static final long serialVersionUID = 1L;
+
 	@Column
 	private String user;
 

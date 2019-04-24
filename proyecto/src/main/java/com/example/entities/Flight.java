@@ -8,7 +8,7 @@ import java.sql.Time;
 import java.util.Date;
 
 @Entity
-public class Flights {
+public class Flight {
 
 	@Id
 	private Long id;
@@ -29,7 +29,7 @@ public class Flights {
 	@Column
 	private double price;
 	
-	public Flights() {}
+	public Flight() {}
 	
 	
 	public Long getId() {

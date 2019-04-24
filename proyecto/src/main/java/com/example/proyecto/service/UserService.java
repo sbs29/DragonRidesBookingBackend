@@ -11,8 +11,8 @@ import com.example.proyecto.repository.UserRepository;
 public class UserService extends AbstractService<User> {
 
 	@Autowired
-	public void setRepositorio(UserRepository loginRepository) {
-		super.setRepositorio((CrudRepository<User, Long>) loginRepository);
+	public void setUserRepository(UserRepository loginRepository) {
+		super.setRepository((CrudRepository<User, Long>) loginRepository);
 
 	}
 

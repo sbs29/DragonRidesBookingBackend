@@ -1,9 +1,11 @@
 package com.example.proyecto.repository;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import com.example.entities.Discounts;
+import com.example.entities.Discount;
 
-public interface DiscountsRepository extends CrudRepository<Discounts, Long>{
+@Repository
+public interface DiscountsRepository extends CrudRepository<Discount, Long>{
 
 }

@@ -1,9 +1,11 @@
 package com.example.proyecto.repository;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import com.example.entities.Flights;
+import com.example.entities.Flight;
 
-public interface FlightsRepository extends CrudRepository<Flights, Long>{
+@Repository
+public interface FlightsRepository extends CrudRepository<Flight, Long>{
 
 }

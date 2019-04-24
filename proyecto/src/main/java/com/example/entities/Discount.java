@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Discounts {
+public class Discount {
 
 	@Id
 	private Long id;
@@ -16,7 +16,7 @@ public class Discounts {
 	@Column
 	private Long percentage;
 	
-	public Discounts() {}
+	public Discount() {}
 	
 	public Long getId() {
 		return id;

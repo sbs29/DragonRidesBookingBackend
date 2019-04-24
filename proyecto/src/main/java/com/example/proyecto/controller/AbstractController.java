@@ -2,47 +2,51 @@ package com.example.proyecto.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.entities.AbstractEntity;
 import com.example.proyecto.service.AbstractService;
 
-@RestController
 public abstract class AbstractController<E extends AbstractEntity> {
 
-	@Autowired
-	AbstractService<E> abstractService;
+	AbstractService<E> service;
 
-	@GetMapping("/abstractEntity")
-	public List<E> getAllAbstractEntity() {
-		return (List<E>) abstractService.getAll();
+	protected void setService(AbstractService<E> service) {
+		this.service = service;
 	}
 
-	@GetMapping("/abstractEntity/{id}")
+	@ResponseBody
+	@RequestMapping(method = RequestMethod.GET, path = "")
+	public List<E> getAll() {
+		return (List<E>) service.getAll();
+	}
+
+	@ResponseBody
+	@RequestMapping(method = RequestMethod.GET, path = "{id}")
 	public AbstractEntity getOne(@PathVariable(value = "id") long id) {
-		return abstractService.get(id);
+		return service.get(id);
 	}
 
-	@PostMapping("/abstractEntity")
+	@ResponseBody
+	@RequestMapping(method = RequestMethod.POST, path = "")
 	public void add(@RequestBody E e) {
-		abstractService.post(e);
+		service.post(e);
 	}
 
-	@PutMapping("/abstractEntity/{id}")
+	@ResponseBody
+	@RequestMapping(method = RequestMethod.PUT, path = "{id}")
 	public void update(@RequestBody E e, @PathVariable(value = "id") long id) {
-		abstractService.put(e, id);
+		service.put(e, id);
 	}
 
-	@DeleteMapping("/login/{id}")
+	@ResponseBody
+	@RequestMapping(method = RequestMethod.DELETE, path = "{id}")
 	public void update(@PathVariable(value = "id") long id) {
-		abstractService.delete(id);
+		service.delete(id);
 	}
 
 }
