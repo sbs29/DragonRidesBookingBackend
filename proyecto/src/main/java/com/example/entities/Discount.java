@@ -2,38 +2,42 @@ package com.example.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Discount extends AbstractEntity{
 
-	@Id
+
+	private static final long serialVersionUID = 1L;
+
 	private Long id;
 	@Column
 	private Long offer;
 	@Column
-	private Long destination;
+	private Destination destination;
 	@Column
 	private Long percentage;
 	
 	public Discount() {}
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return id;
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+	
 	public Long getOffer() {
 		return offer;
 	}
 	public void setOffer(Long offer) {
 		this.offer = offer;
 	}
-	public Long getDestination() {
+	public Destination getDestination() {
 		return destination;
 	}
-	public void setDestination(Long destination) {
+	public void setDestination(Destination destination) {
 		this.destination = destination;
 	}
 	public Long getPercentage() {
@@ -42,11 +46,4 @@ public class Discount extends AbstractEntity{
 	public void setPercentage(Long percentage) {
 		this.percentage = percentage;
 	}
-
-	@Override
-	public String toString() {
-		return "Discounts [id=" + id + ", offer=" + offer + ", destination=" + destination + ", percentage="
-				+ percentage + "]";
-	}
-	
 }

@@ -11,6 +11,14 @@ public class Airline extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
 
+	@Column
+	private String airlineName;
+	@Column
+	private String airlineImage;
+
+	public Airline() {
+	}
+
 	@Override
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,14 +26,11 @@ public class Airline extends AbstractEntity {
 		return super.getId();
 	}
 
-	@Column
-	private String airlineName;
-
-	public String getAirlineName() {
+	public String getAilineName() {
 		return airlineName;
 	}
 
-	public void setAirlineName(String airlineName) {
+	public void setAilineName(String airlineName) {
 		this.airlineName = airlineName;
 	}
 
@@ -35,12 +40,6 @@ public class Airline extends AbstractEntity {
 
 	public void setAirlineImage(String airlineImage) {
 		this.airlineImage = airlineImage;
-	}
-
-	@Column
-	private String airlineImage;
-
-	public Airline() {
 	}
 
 }
