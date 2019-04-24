@@ -14,9 +14,9 @@ public class DiscountController {
 	@Autowired
 	private DiscountService service;
 
-	@RequestMapping("/")
-	public String welcome(Map<String, Object> model) {
-		return "index";
+	@RequestMapping("/discount")
+	public String discount(Map<String, Object> model) {
+		return "discount";
 	}
 
 }

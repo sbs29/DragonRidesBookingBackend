@@ -8,7 +8,7 @@ import com.example.entities.Destination;
 import com.example.proyecto.repository.DestinationsRepository;
 
 @Service
-public abstract class DestinationsService extends AbstractService<Destination> {
+public class DestinationsService extends AbstractService<Destination> {
 
 	@Autowired
 	public void setDestinationRepository(DestinationsRepository destinationRepository) {
