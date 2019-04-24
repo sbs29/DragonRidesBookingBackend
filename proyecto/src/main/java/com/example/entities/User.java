@@ -1,4 +1,4 @@
-package com.example.proyecto.entity;
+package com.example.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Login extends AbstractEntity {
+public class User extends AbstractEntity {
 
 	@Column
 	private String user;
@@ -15,7 +15,7 @@ public class Login extends AbstractEntity {
 	@Column
 	private String password;
 
-	public Login() {
+	public User() {
 	}
 
 	@Id

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.proyecto.entity.AbstractEntity;
+import com.example.entities.AbstractEntity;
 import com.example.proyecto.service.AbstractService;
 
 @RestController

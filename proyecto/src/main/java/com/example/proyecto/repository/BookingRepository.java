@@ -1,7 +1,8 @@
-package dao;
+package com.example.proyecto.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import entities.Booking;
+
+import com.example.entities.Booking;
 
 public interface BookingRepository extends CrudRepository<Booking, Long>{
 

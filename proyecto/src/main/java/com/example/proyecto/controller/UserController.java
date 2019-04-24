@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.proyecto.entity.Login;
-import com.example.proyecto.service.UsuarioService;
+import com.example.entities.User;
+import com.example.proyecto.service.UserService;
 
 @RestController
-public class UsuarioController <E extends Login> {
+public class UserController <E extends User> {
 
 //	@Autowired
 //	Repositorio repositorio;
 	
 	@Autowired
-	UsuarioService usuarioService;
+	UserService usuarioService;
 
 //	@GetMapping("/login")
 //	public List<Login> getAllLogin() {

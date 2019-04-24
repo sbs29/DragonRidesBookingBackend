@@ -1,22 +1,18 @@
-package entities;
+package com.example.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Login {
+public class Destinations {
 
 	@Id
 	private Long id;
 	@Column
 	private String name;
-	@Column
-	private String password;
-
-	public Login() {
-
-	}
+	
+	public Destinations() {}
 
 	public Long getId() {
 		return id;
@@ -34,17 +30,9 @@ public class Login {
 		this.name = name;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	@Override
 	public String toString() {
-		return "Login [id=" + id + ", nombre=" + name + ", contraseña=" + password + "]";
+		return "Destinations [id=" + id + ", name=" + name + "]";
 	}
-
+	
 }

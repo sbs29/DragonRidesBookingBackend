@@ -5,12 +5,16 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
-import com.example.proyecto.entity.AbstractEntity;
+import com.example.entities.AbstractEntity;
 
 @Service
 public abstract class AbstractService <E extends AbstractEntity> {
 
-	CrudRepository<E, Long> repositorio;
+	private CrudRepository<E, Long> repositorio;
+
+	protected void setRepositorio(CrudRepository<E, Long> repositorio) {
+		this.repositorio = repositorio;
+	}
 
 	public E get(long id) {
 		return repositorio.findById(id).get();
