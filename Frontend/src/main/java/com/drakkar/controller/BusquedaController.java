@@ -11,7 +11,7 @@ public class BusquedaController {
 	
 	
 		@RequestMapping("/Busqueda")
-		public String Compra(Map<String, Object> model) {
+		public String Busqueda(Map<String, Object> model) {
 			return "Busqueda";
 
 	}
