@@ -9,14 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.drakkar.service.DiscountService;
 
 @Controller
-public class DiscountController {
+public class WelcomeController {
 
 	@Autowired
 	private DiscountService service;
 
-	@RequestMapping("/")
+	@RequestMapping("/discount")
 	public String welcome(Map<String, Object> model) {
-		return "index";
+		model.put("discounts", service.findAll());
+		return "discount";
 	}
 
 }
