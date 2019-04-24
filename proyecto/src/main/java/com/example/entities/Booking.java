@@ -11,7 +11,6 @@ public class Booking extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
 	@Column
 	private User user;
 
@@ -21,7 +20,7 @@ public class Booking extends AbstractEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
-		return id;
+		return super.getId();
 	}
 
 	public User getUser() {

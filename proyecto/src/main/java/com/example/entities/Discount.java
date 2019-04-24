@@ -12,22 +12,21 @@ public class Discount extends AbstractEntity{
 
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
 	@Column
 	private Long offer;
 	@Column
 	private Destination destination;
 	@Column
 	private Long percentage;
-	
+
 	public Discount() {}
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
-		return id;
+		return super.getId();
 	}
-	
+
 	public Long getOffer() {
 		return offer;
 	}
