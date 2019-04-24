@@ -5,15 +5,14 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import com.example.entities.Airline;
-import com.example.proyecto.repository.AirlinesRepository;
+import com.example.proyecto.repository.AirlineRepository;
 
 @Service
-public abstract class AirlineService extends AbstractService<Airline> {
+public class AirlineService extends AbstractService<Airline> {
 
 	@Autowired
-	public void setAirlineRepository(AirlinesRepository airlinesRepository) {
+	public void setAirlineRepository(AirlineRepository airlinesRepository) {
 		super.setRepository((CrudRepository<Airline, Long>) airlinesRepository);
-
 	}
 
 }
