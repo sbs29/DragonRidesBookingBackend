@@ -11,7 +11,7 @@ public class BookingController {
 
 	@RequestMapping("/booking")
 	public String booking(Map<String, Object> model) {
-		return "booking";
+		return "PaginaBooking";
 
 }
 }

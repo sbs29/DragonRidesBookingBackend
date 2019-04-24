@@ -10,9 +10,9 @@ public class BusquedaController {
 
 	
 	
-		@RequestMapping("/Compra")
-		public String Compra(Map<String, Object> model) {
-			return "Compra2";
+		@RequestMapping("/Busqueda")
+		public String Busqueda(Map<String, Object> model) {
+			return "Busqueda";
 
 	}
 	}
