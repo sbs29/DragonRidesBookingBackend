@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 
-public class MostrarIdaController {
-	@RequestMapping("/paginaMostrarIda")
-	public String Mostrar(Map<String, Object> model) {
-		return "PaginaMostrarIda";
+public class ShowGoingController {
+	@RequestMapping("/ShowGoing")
+	public String show(Map<String, Object> model) {
+		return "ShowGoing";
 
 }
 }

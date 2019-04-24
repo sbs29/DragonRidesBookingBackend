@@ -5,12 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class InsertarVuelosController
+public class InsertFlightsController
 {
 
-		@RequestMapping("/InsertV")
+		@RequestMapping("/InsertF")
 		public String insert(Map<String, Object> model) {
-			return "InsertarVuelos";
+			return "InsertFlights";
 
 	}
 	}

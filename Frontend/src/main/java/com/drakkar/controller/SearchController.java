@@ -6,13 +6,13 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
-public class BusquedaController {
+public class SearchController {
 
 	
 	
-		@RequestMapping("/Compra")
-		public String Compra(Map<String, Object> model) {
-			return "Compra2";
+		@RequestMapping("/Search")
+		public String search(Map<String, Object> model) {
+			return "Search";
 
 	}
 	}

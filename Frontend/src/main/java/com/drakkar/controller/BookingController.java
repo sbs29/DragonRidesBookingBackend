@@ -9,9 +9,9 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class BookingController {
 
-	@RequestMapping("/booking")
+	@RequestMapping("/Booking")
 	public String booking(Map<String, Object> model) {
-		return "booking";
+		return "Booking";
 
 }
 }
