@@ -21,7 +21,7 @@ public class Airline extends AbstractEntity {
 
 	@Override
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	public Long getId() {
 		return super.getId();
 	}

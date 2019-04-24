@@ -13,7 +13,7 @@ import com.example.proyecto.service.AbstractService;
 
 public abstract class AbstractController<E extends AbstractEntity> {
 
-	AbstractService<E> service;
+	private AbstractService<E> service;
 
 	protected void setService(AbstractService<E> service) {
 		this.service = service;
@@ -48,5 +48,10 @@ public abstract class AbstractController<E extends AbstractEntity> {
 	public void update(@PathVariable(value = "id") long id) {
 		service.delete(id);
 	}
+
+	protected AbstractService<E> getService() {
+		return service;
+	}
+
 
 }
