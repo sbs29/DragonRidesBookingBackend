@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Discount {
+public class Discount extends AbstractEntity{
 
 	@Id
 	private Long id;
