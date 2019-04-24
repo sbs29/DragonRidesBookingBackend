@@ -5,23 +5,22 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Airline {
+public class Airline extends AbstractEntity {
 
-	@Id
-	private Long id;
+	private static final long serialVersionUID = 1L;
+
 	@Column
 	private String airlineName;
 	@Column
 	private String airlineImage;
-	
-	public Airline() {}
 
-	public Long getId() {
-		return id;
+	public Airline() {
 	}
-	
-	public void setId(Long id) {
-		this.id = id;
+
+	@Override
+	@Id
+	public Long getId() {
+		return super.getId();
 	}
 
 	public String getAilineName() {
@@ -40,9 +39,4 @@ public class Airline {
 		this.airlineImage = airlineImage;
 	}
 
-	@Override
-	public String toString() {
-		return "Airlines [id=" + id + ", airlineName=" + airlineName + ", airlineImage=" + airlineImage + "]";
-	}
-	
 }

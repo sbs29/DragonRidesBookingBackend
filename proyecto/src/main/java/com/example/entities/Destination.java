@@ -5,21 +5,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Destination {
+public class Destination extends AbstractEntity {
 
-	@Id
-	private Long id;
+	private static final long serialVersionUID = 1L;
+
 	@Column
 	private String name;
-	
+
 	public Destination() {}
 
+	@Override
+	@Id
 	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+		return super.getId();
 	}
 
 	public String getName() {
@@ -30,9 +28,4 @@ public class Destination {
 		this.name = name;
 	}
 
-	@Override
-	public String toString() {
-		return "Destinations [id=" + id + ", name=" + name + "]";
-	}
-	
 }
