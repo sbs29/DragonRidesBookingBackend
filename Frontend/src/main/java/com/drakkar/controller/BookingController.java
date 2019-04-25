@@ -13,5 +13,13 @@ public class BookingController {
 	@RequestMapping("/Booking")
 	public String booking(Map<String, Object> model) {
 		return "Booking";
+<<<<<<< HEAD
+		
+
+		
 	}
+=======
 	}
+
+>>>>>>> 7a44d93e44548f36e213fcc8d87285df87d7d977
+}
