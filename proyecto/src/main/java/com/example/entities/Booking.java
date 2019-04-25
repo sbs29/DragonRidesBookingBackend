@@ -1,17 +1,20 @@
 package com.example.entities;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Booking extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
 
-	@Column
+	private Flight flight;
+	
+	private Discount discount;
+	
 	private User user;
 
 	public Booking() {
@@ -23,6 +26,25 @@ public class Booking extends AbstractEntity {
 		return super.getId();
 	}
 
+	@ManyToOne
+	public Flight getFlight() {
+		return flight;
+	}
+
+	public void setFlight(Flight flight) {
+		this.flight = flight;
+	}
+
+	@ManyToOne
+	public Discount getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(Discount discount) {
+		this.discount = discount;
+	}
+
+	@ManyToOne
 	public User getUser() {
 		return user;
 	}
