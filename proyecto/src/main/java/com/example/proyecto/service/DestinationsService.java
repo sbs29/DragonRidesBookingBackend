@@ -1,5 +1,7 @@
 package com.example.proyecto.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
@@ -16,4 +18,10 @@ public class DestinationsService extends AbstractService<Destination> {
 
 	}
 
+	public List<Destination> getDestinationsByOrigin(Long originId) {
+		return ((DestinationsRepository) getRepository()).getDestinationsByOrigin(originId);
+	}
+
 }
+
+//prueba

@@ -15,4 +15,5 @@ public class FlightsController extends AbstractController<Flight> {
 	protected void setFlightsService(FlightsService service) {
 		super.setService(service);
 	}
+
 }
