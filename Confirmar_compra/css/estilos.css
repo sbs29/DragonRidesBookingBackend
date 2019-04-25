@@ -1,0 +1,62 @@
+
+#principal{
+	width: 900px;
+	height: 1000px;
+	border: 1px solid #000;
+	margin: auto;
+}
+
+header{
+	width: 900px;
+	height: 50px;
+	border: 0px solid #000;
+}
+
+#apartados {
+	width: 900px;
+	height: auto; overflow: hidden;
+	border: 1px solid;
+	margin-top: 10px;
+}
+
+
+.idaVuleta{
+	width: 580px;
+	height: 400px;
+	border: 1px solid;
+	float: left;
+}
+.resumen {
+	width: 300px;
+	height: 800px;
+	border: 1px solid;
+	float: right;
+}
+
+.ida {
+	width: 580px;
+	height: 200px;
+	border: 1px solid;
+}
+
+.vuelta {
+	width: 580px;
+	height: 200px;
+	border: 1px solid;
+}
+
+#opciones {}
+
+.menu ul{}
+
+.menu ul li{
+	list-style: none;
+	float: left;
+}
+
+.menu ul li a{
+	text-decoration: none;
+	padding: 10px 12px;
+	border: 0px solid #ccc;
+}
+

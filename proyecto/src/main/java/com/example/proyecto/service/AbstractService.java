@@ -14,6 +14,10 @@ public abstract class AbstractService <E extends AbstractEntity> {
 		this.repository = repo;
 	}
 
+	protected CrudRepository<E, Long> getRepository() {
+		return repository;
+	}
+
 	public E get(long id) {
 		return repository.findById(id).get();
 	}

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+</head>
+
+<body text="white" background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTUnI0DSwnGUJw8A2fGVOoCPcYHY45fTgRhPZtlZowPpKU4VwBg">
+<h1>LOGIN </h1> 
+
+<form name="login"> 
+     <table width="200" border="0"> 
+       <tr> 
+         <th scope="row"><h2>User: </h2></th> 
+         <td><span class="cnt"> 
+           <input style="background-color: #0099CC" name="usuario" type="text" class="Input" value="" size="20" /> 
+         </span></td> 
+       </tr> 
+       <tr> 
+         <th height="33" scope="row"><h2>Pass: </h2></th> 
+         <td><span class="cnt"> 
+           <input style="background-color: #0099CC" name="password" type="password" class="Input" value="" size="20" /> 
+         </span></td> 
+         <td><span class="cnt"> 
+           
+         </span></td> 
+       </tr> 
+	   <br/>
+       <tr> 
+	   
+         <th scope="row"><input style="background-color: #0099CC" type="reset" name="Borrar" id="Borrar" value="RESET" class="boton" /></th> 
+	
+		 <th><input style="background-color: #0099CC" value="ENTER" target="_parent" onclick="Login()" type="button" class="boton" accesskey="enter"/></th>
+       </tr> 
+     </table> 
+	 
+</form> 
+<script language="JavaScript"> 
+function Login(){ 
+var done=0; 
+var usuario=document.login.usuario.value; 
+var password=document.login.password.value; 
+if (usuario=="ernesto" && password=="123") { 
+window.location="index.html"; 
+} 
+if (usuario=="ruben" && password=="123") { 
+window.location="index.html"; 
+} 
+if (usuario=="sergio" && password=="123") { 
+window.location="index.html"; 
+} 
+if (usuario=="carlos" && password=="123") { 
+window.location="index.html"; 
+} 
+if (usuario=="martin" && password=="123") { 
+window.location="index.html"; 
+} 
+if (usuario=="" && password=="") { 
+alert("Enter User and Pass!");
+} 
+if (usuario=="") { 
+alert("Enter Pass!");
+} 
+if (password=="") { 
+alert("Enter User!");
+} 
+} 
+</script> 
+</center> 
+<script language="Javascript"> 
+<!-- Begin 
+document.oncontextmenu = function(){return false} 
+// End --> 
+</script>
+</body>
+</html>

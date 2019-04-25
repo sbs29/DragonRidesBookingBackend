@@ -2,38 +2,57 @@ package com.example.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Booking extends AbstractEntity{
+public class Booking extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
-	@Id
-	private Long id;
+
 	@Column
-	private String user;
-	
-	public Booking() {}
-	
+	private String idUser;
+
+	private String idFlight;
+
+	private int offer;
+
+	public Booking() {
+	}
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
-		return id;
+		return super.getId();
 	}
+
 	public void setId(Long id) {
-		this.id = id;
-	}
-	
-	public String getUser() {
-		return user;
-	}
-	public void setUser(String user) {
-		this.user = user;
+		super.setId(id);
 	}
 
-	@Override
-	public String toString() {
-		return "Booking [id=" + id + ", user=" + user + "]";
+	public String getIdUser() {
+		return idUser;
 	}
 
-	
-	
+	public void setIdUser(String idUser) {
+		this.idUser = idUser;
+	}
+
+	public String getIdFlight() {
+		return idFlight;
+	}
+
+	public void setIdFlight(String idFlight) {
+		this.idFlight = idFlight;
+	}
+
+	public int getOffer() {
+		return offer;
+	}
+
+	public void setOffer(int offer) {
+		this.offer = offer;
+	}
+
 }
