@@ -11,11 +11,8 @@ public class BookingController {
 
 	@RequestMapping("/Booking")
 	public String booking(Map<String, Object> model) {
-<<<<<<< HEAD
-		return "PaginaBooking";
-=======
 		return "Booking";
->>>>>>> 5e151b7cd0d0ed8a09e69473d77583ea641f9688
+
 
 }
 }
