@@ -21,5 +21,6 @@ public class DestinationsService extends AbstractService<Destination> {
 	public List<Destination> getDestinationsByOrigin(Long originId) {
 		return ((DestinationsRepository) getRepository()).getDestinationsByOrigin(originId);
 	}
+	
 
 }

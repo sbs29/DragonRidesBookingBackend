@@ -1,22 +1,21 @@
 package com.example.entities;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Booking extends AbstractEntity {
 
 	private static final long serialVersionUID = 1L;
 
-	@Column
-	private String idUser;
-
-	private String idFlight;
-
-	private int offer;
+	private Flight flight;
+	
+	private Discount discount;
+	
+	private User user;
 
 	public Booking() {
 	}
@@ -27,32 +26,30 @@ public class Booking extends AbstractEntity {
 		return super.getId();
 	}
 
-	public void setId(Long id) {
-		super.setId(id);
+	@ManyToOne
+	public Flight getFlight() {
+		return flight;
 	}
 
-	public String getIdUser() {
-		return idUser;
+	public void setFlight(Flight flight) {
+		this.flight = flight;
 	}
 
-	public void setIdUser(String idUser) {
-		this.idUser = idUser;
+	@ManyToOne
+	public Discount getDiscount() {
+		return discount;
 	}
 
-	public String getIdFlight() {
-		return idFlight;
+	public void setDiscount(Discount discount) {
+		this.discount = discount;
 	}
 
-	public void setIdFlight(String idFlight) {
-		this.idFlight = idFlight;
+	@ManyToOne
+	public User getUser() {
+		return user;
 	}
 
-	public int getOffer() {
-		return offer;
+	public void setUser(User user) {
+		this.user = user;
 	}
-
-	public void setOffer(int offer) {
-		this.offer = offer;
-	}
-
 }
