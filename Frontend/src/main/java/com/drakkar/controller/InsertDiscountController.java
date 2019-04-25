@@ -10,7 +10,7 @@ public class InsertDiscountController{
 	
 	@RequestMapping("/insertarDiscount")
 	public String insertarD(Map<String, Object> model) {
-			return "InsertarDescuentos";
+			return "InsertarDiscount";
 
 			}
 			}
