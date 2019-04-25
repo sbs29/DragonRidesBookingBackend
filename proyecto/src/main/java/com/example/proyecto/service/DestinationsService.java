@@ -23,5 +23,3 @@ public class DestinationsService extends AbstractService<Destination> {
 	}
 
 }
-
-//prueba
