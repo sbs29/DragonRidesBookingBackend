@@ -11,8 +11,7 @@ import com.drakkar.service.DiscountService;
 @Controller
 public class DiscountController {
 
-	@Autowired
-	private DiscountService service;
+	
 	@RequestMapping("/discount")
 	public String discount(Map<String, Object> model) {
 
