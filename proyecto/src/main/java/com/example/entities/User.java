@@ -26,10 +26,6 @@ public class User extends AbstractEntity {
 		return super.getId();
 	}
 
-	public void setId(Long id) {
-		super.setId(id);
-	}
-
 	public String getUser() {
 		return user;
 	}
@@ -45,5 +41,4 @@ public class User extends AbstractEntity {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 }

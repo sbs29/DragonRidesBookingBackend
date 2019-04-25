@@ -5,10 +5,10 @@ import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
-public class MostrarIdaVueltaController {
-	@RequestMapping("/IdaVuelta")
-	public String Mostrar2(Map<String, Object> model) {
-		return "IdaVuelta";
+public class ShowGoingBackController {
+	@RequestMapping("/GoingBack")
+	public String show2(Map<String, Object> model) {
+		return "GoingBack";
 
 }
 }
