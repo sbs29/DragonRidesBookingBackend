@@ -14,6 +14,6 @@ public class BookingController {
 	public String booking(Map<String, Object> model) {
 		return "PaginaBooking";
 
-}
+	}
 }
 
