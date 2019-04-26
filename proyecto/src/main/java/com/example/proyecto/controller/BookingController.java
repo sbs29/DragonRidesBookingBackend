@@ -15,4 +15,4 @@ public class BookingController extends AbstractController<Booking> {
 	protected void setBookingService(BookingService service) {
 		super.setService(service);
 	}
-}
+} 

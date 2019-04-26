@@ -24,8 +24,8 @@ public class DestinationsController extends AbstractController<Destination>{
 	@ResponseBody
 	@RequestMapping(method = RequestMethod.GET, path = "{id}/destination")
 	
-	public List<Destination> getDestinationsByOrigin(@PathVariable("id") Long originId) {
-		return ((DestinationsService) getService()).getDestinationsByOrigin(originId);
+	public List<Destination> getDestinationsByOriginOrderByPriceAsc(@PathVariable("id") Long originId) {
+		return ((DestinationsService) getService()).getDestinationsByOriginOrderByPriceAsc(originId);
 	}
 	
 
