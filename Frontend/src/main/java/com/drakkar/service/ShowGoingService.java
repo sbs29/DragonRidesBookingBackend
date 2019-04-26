@@ -13,7 +13,7 @@ public class ShowGoingService {
 	public List<Discount> findAll() {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<List<Discount>> response = restTemplate.exchange(
-        		  "http://localhost:8080/discount/", //TODO get the url from the app configuration
+        		  "http://localhost:8080/flights/", //TODO get the url from the app configuration
         		  HttpMethod.GET,
         		  null,
         		  new ParameterizedTypeReference<List<Discount>>(){});
