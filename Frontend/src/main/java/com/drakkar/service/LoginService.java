@@ -14,7 +14,7 @@ public class LoginService {
 	public List<Discount> findAll() {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<List<Discount>> response = restTemplate.exchange(
-        		  "http://localhost:8080/discount/", //TODO get the url from the app configuration
+        		  "http://localhost:8080/user/", //TODO get the url from the app configuration
         		  HttpMethod.GET,
         		  null,
         		  new ParameterizedTypeReference<List<Discount>>(){});
