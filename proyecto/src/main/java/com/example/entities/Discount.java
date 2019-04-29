@@ -14,15 +14,14 @@ public class Discount extends AbstractEntity{
 
 
 	private static final long serialVersionUID = 1L;
-
-	@Column
-	private Long offer;
 	
 	private Destination destination;
 	@Column
 	private Long percentage;
 	@Column
-	private Date date;
+	private Date startdate;
+	@Column
+	private Date enddate;
 	
 	public Discount() {}
 
@@ -32,21 +31,22 @@ public class Discount extends AbstractEntity{
 		return super.getId();
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getStartDate() {
+		return startdate;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public Long getOffer() {
-		return offer;
-	}
-	public void setOffer(Long offer) {
-		this.offer = offer;
+	public void setStartDate(Date date) {
+		this.startdate = date;
 	}
 	
+	public Date getEndDate() {
+		return enddate;
+	}
+
+	public void setEndDate(Date date) {
+		this.enddate = date;
+	}
+
 	@ManyToOne
 	public Destination getDestination() {
 		return destination;
