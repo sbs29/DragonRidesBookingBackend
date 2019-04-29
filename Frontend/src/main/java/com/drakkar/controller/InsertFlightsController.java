@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class InsertFlightsController
 {
 
-		@RequestMapping("/InsertF")
+		@RequestMapping("/InsertFlights")
 		public String insert(Map<String, Object> model) {
 			return "InsertFlights";
 
