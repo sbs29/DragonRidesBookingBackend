@@ -26,7 +26,7 @@
 					<select name="originId">
 						<option value="">--Please select one--</option>
 						<option th:each="departure: ${departures} " th:text="${departure.name}"
-							th:value="${departure.id}" th:selected="${parameters != null && parameters.get('originId') != null  && parameters.get('originId') == departure.id}"></option>
+							th:value="${departure.id}" th:selected="${parameters != null && #strings.equals(parameters.get('originId'), departure.id)}"></option>
 					</select>
 			</th>
 			<th>
@@ -35,7 +35,7 @@
 					<select name="destinationId">
 						<option value="">--Please select one--</option>
 						<option th:each="departure: ${departures} " th:text="${departure.name}"
-							th:value="${departure.id}" th:selected="${parameters != null && parameters.get('destinationId') != null && parameters.get('destinationId') == departure.id}"></option>
+							th:value="${departure.id}" th:selected="${parameters != null && #strings.equals(parameters.get('destinationId'), departure.id)}"></option>
 					</select>
 			</th>
 			<th>

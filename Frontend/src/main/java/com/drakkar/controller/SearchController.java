@@ -24,14 +24,19 @@ public class SearchController {
 
 
 	@RequestMapping("/")
-	public String search(Map<String, Object> model) {
+	public String doShowView(Map<String, Object> model) {
+		return doSearchView(model);
+	}
+
+	@RequestMapping("/flights/view")
+	public String doSearchView(Map<String, Object> model) {
 		List<Destination> destinations = this.destinationService.findAll();
 		model.put("departures", destinations);
 		return "Search";
 	}
 
 	@RequestMapping("/Search")
-	public String search(@RequestParam Map<String, String> parameters, Map<String, Object> model) {
+	public String doSearch(@RequestParam Map<String, String> parameters, Map<String, Object> model) {
 		model.put("parameters", parameters);
 
 		String originId = parameters.get("originId");
