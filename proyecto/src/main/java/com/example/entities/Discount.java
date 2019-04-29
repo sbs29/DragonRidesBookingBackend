@@ -18,7 +18,7 @@ public class Discount extends AbstractEntity{
 	@Column
 	private Long offer;
 	
-	private Destination destination;
+	
 	@Column
 	private Long percentage;
 	@Column
@@ -45,14 +45,6 @@ public class Discount extends AbstractEntity{
 	}
 	public void setOffer(Long offer) {
 		this.offer = offer;
-	}
-	
-	@ManyToOne
-	public Destination getDestination() {
-		return destination;
-	}
-	public void setDestination(Destination destination) {
-		this.destination = destination;
 	}
 	
 	public Long getPercentage() {
