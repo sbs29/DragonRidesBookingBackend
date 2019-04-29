@@ -10,44 +10,50 @@
 	<br>
 	<br>
 <p><table align ="center">
-<tr>
-<th>
-<form action="/action_page.php">
-<p>Departures</p>
-  <input list="Departure" name="Departure">
-  <datalist id="Departure">
-    <option value="">
-    <option value="">
-    <option value="">
-    <option value="">
-    <option value="">
-  </datalist>
-</form>
+<tr th th:each="flights: ${discounts}">
+<th >
+<select name="Departures">
+   <option selected value="0"> Departures </option>
+       <option value="1"></option> 
+       <option value="2"></option> 
+       <option value="3"></option> 
+   </optgroup> 
+       <option value="10"></option> 
+       <option value="11"></option> 
+       <option value="12"></option> 
+   </optgroup> 
+</select>
 </th>
 <th>
 </p>
-<form action="/action_page.php">
-<p>Destination</p>
-  <input list="Departure" name="Departure">
-  <datalist id="Departure">
-    <option value="">
-    <option value="">
-    <option value="">
-    <option value="">
-    <option value="">
-  </datalist>
-</form>
+<select name="Destination">
+   <option selected value="0"> Destination </option>
+       <option value="1"></option> 
+       <option value="2"></option> 
+       <option value="3"></option> 
+   </optgroup> 
+       <option value="10"></option> 
+       <option value="11"></option> 
+       <option value="12"></option> 
+   </optgroup> 
+</select>
 </th>
 <th>
 <p>Departure Date</p>
-<form action="/action_page.php">
-  <input type="date" name="bdaytime">
+<form>
+  <div>
+    <label for="bday"></label>
+    <input type="date" id="bday" name="bday">
+  </div>
 </form>
 </th>
 <th>
 <p>Return Date</p>
-<form action="/action_page.php">
-  <input type="date" name="bdaytime">
+<form>
+  <div>
+    <label for="bday"></label>
+    <input type="date" id="bday" name="bday">
+  </div>
 </form>
 </th>
 <tr>
@@ -56,10 +62,8 @@
 <th width="50%">
 </th> 
 <th>
-<form action="/action_page.php">
+<p>roundtrip</p>
 <input type="checkbox" name="roundtrip" value="typeTrip">
-roundtrip
-</form> 
 </th>
 </tr>
 </table>
