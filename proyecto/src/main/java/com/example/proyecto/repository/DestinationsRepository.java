@@ -16,5 +16,5 @@ public interface DestinationsRepository extends CrudRepository<Destination, Long
 	List<Destination> getDestinationsByOriginOrderByPriceAsc(@Param("originId") Long originId);
 	
 
- 
+
 }

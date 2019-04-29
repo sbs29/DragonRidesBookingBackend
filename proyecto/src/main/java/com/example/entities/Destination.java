@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Destination extends AbstractEntity {
@@ -14,8 +13,6 @@ public class Destination extends AbstractEntity {
 
 	@Column
 	private String name;
-	
-	private Discount discount;
 
 	public Destination() {}
 
@@ -31,15 +28,6 @@ public class Destination extends AbstractEntity {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	@ManyToOne
-	public Discount getDiscount() {
-		return discount;
-	}
-
-	public void setDiscount(Discount discount) {
-		this.discount = discount;
 	}
 
 }

@@ -13,6 +13,8 @@ public class Booking extends AbstractEntity {
 
 	private Flight flight;
 	
+	private Discount discount;
+	
 	private User user;
 
 	public Booking() {
@@ -31,6 +33,15 @@ public class Booking extends AbstractEntity {
 
 	public void setFlight(Flight flight) {
 		this.flight = flight;
+	}
+
+	@ManyToOne
+	public Discount getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(Discount discount) {
+		this.discount = discount;
 	}
 
 	@ManyToOne
