@@ -1,83 +1,65 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>DragonFlights</title>
-	
+<title>DragonFlights</title>
+
 </head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<body text="white" background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTUnI0DSwnGUJw8A2fGVOoCPcYHY45fTgRhPZtlZowPpKU4VwBg" background-position="bottom" "right">
-<h1>Search Flights</h1>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<body text="white"
+	background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTUnI0DSwnGUJw8A2fGVOoCPcYHY45fTgRhPZtlZowPpKU4VwBg"
+	background-position="bottom">
+
+				<form action="/Search">
+	<h1>Search Flights</h1>
 	<br>
 	<br>
-<p><table align ="center">
-<tr>
-<th>
-<form action="/action_page.php">
-<p>Departures</p>
-  <input list="Departure" name="Departure">
-  <datalist id="Departure">
-    <option value="Gondolin">
-    <option value="Rivendel">
-    <option value="Nargothrond">
-    <option value="Mithlond">
-    <option value="Tirion">
-  </datalist>
+	<p>
+
+	<div style="color:red; font-weight: boldest" th:if="${not #lists.isEmpty(errors)}">
+			<p th:each="error: ${errors}" th:text="${error}">
+			</p>
+	 </div>
+	<table align="center">
+		<tr>
+		<th>
+					<p>Departures</p>
+					<select name="originId">
+						<option value="">--Please select one--</option>
+						<option th:each="departure: ${departures} " th:text="${departure.name}"
+							th:value="${departure.id}" th:selected="${parameters != null && #strings.equals(parameters.get('originId'), departure.id)}"></option>
+					</select>
+			</th>
+			<th>
+				</p>
+					<p>Destination</p>
+					<select name="destinationId">
+						<option value="">--Please select one--</option>
+						<option th:each="departure: ${departures} " th:text="${departure.name}"
+							th:value="${departure.id}" th:selected="${parameters != null && #strings.equals(parameters.get('destinationId'), departure.id)}"></option>
+					</select>
+			</th>
+			<th>
+				<p>Departure Date</p>
+					<input type="date" name="bdaytime">
+			</th>
+			<th>
+				<p>Return Date</p>
+					<input type="date" name="bdaytime">
+			</th>
+		<tr>
+			<table align="center">
+				<tr>
+					<th width="50%"></th>
+					<th>
+							<input type="checkbox" name="roundtrip" value="typeTrip">
+							Roundtrip
+					</th>
+				</tr>
+			</table>
+			<div align='center'>
+				<input type="submit" value="Search"/>
+			</div>
 </form>
-</th>
-<th>
-</p>
-<form action="/action_page.php">
-<p>Destination</p>
-  <input list="Departure" name="Departure">
-  <datalist id="Departure">
-    <option value="Gondolin">
-    <option value="Rivendel">
-    <option value="Nargothrond">
-    <option value="Mithlond">
-    <option value="Tirion">
-  </datalist>
-</form>
-</th>
-<th>
-<p>Departure Datetime</p>
-<form action="/action_page.php">
-  <input type="datetime-local" name="bdaytime">
-</form>
-</th>
-<th>
-<p>Return Datetime</p>
-<form action="/action_page.php">
-  <input type="datetime-local" name="bdaytime">
-</form>
-</th>
-<tr>
-<table align="center">
-<tr>
-<th>
-<form action="/action_page.php">
-<p>Airline</p>
-  <input list="Airline" name="Airline">
-  <datalist id="Airline">
-    <option value="Jormunand">
-    <option value="Wawel">
-    <option value="LaidlyWorm">
-    <option value="Sirrush">
-    <option value="Tiamat">
-  </datalist>
-</form>
-</th>
-<th width="50%">
-</th>
-<th>
-<form action="/action_page.php">
-<input type="checkbox" name="vehicle1" value="Bike">
-roundtrip
-</form> 
-</th>
-</tr>
-</table>
-<div align='center' >
-    <button class='btn-bot'>Search</button>
-</div>
-</body>	
+
+</body>
 </html>

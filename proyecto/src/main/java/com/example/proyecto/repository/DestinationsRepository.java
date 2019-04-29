@@ -12,7 +12,9 @@ import com.example.entities.Destination;
 @Repository
 public interface DestinationsRepository extends CrudRepository<Destination, Long> {
 
-	@Query("select f.destination from Flight as f where f.origin.id = :originId") // f inner join f.destination dest
-	List<Destination> getDestinationsByOrigin(@Param("originId") Long originId);
+	@Query("select f from Flight as f where f.origin.id = :originId") // f inner join f.destination dest
+	List<Destination> getDestinationsByOriginOrderByPriceAsc(@Param("originId") Long originId);
+	
+
 
 }
