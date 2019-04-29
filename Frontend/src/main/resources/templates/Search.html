@@ -1,74 +1,65 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>DragonFlights</title>
-	
+<title>DragonFlights</title>
+
 </head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<body text="white" background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTUnI0DSwnGUJw8A2fGVOoCPcYHY45fTgRhPZtlZowPpKU4VwBg" background-position="bottom" "right">
-<h1>Search Flights</h1>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<body text="white"
+	background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTUnI0DSwnGUJw8A2fGVOoCPcYHY45fTgRhPZtlZowPpKU4VwBg"
+	background-position="bottom">
+
+				<form action="/Search">
+	<h1>Search Flights</h1>
 	<br>
 	<br>
-<p><table align ="center">
-<tr th th:each="flights: ${discounts}">
-<th >
-<select name="Departures">
-   <option selected value="0"> Departures </option>
-       <option value="1"></option> 
-       <option value="2"></option> 
-       <option value="3"></option> 
-   </optgroup> 
-       <option value="10"></option> 
-       <option value="11"></option> 
-       <option value="12"></option> 
-   </optgroup> 
-</select>
-</th>
-<th>
-</p>
-<select name="Destination">
-   <option selected value="0"> Destination </option>
-       <option value="1"></option> 
-       <option value="2"></option> 
-       <option value="3"></option> 
-   </optgroup> 
-       <option value="10"></option> 
-       <option value="11"></option> 
-       <option value="12"></option> 
-   </optgroup> 
-</select>
-</th>
-<th>
-<p>Departure Date</p>
-<form>
-  <div>
-    <label for="bday"></label>
-    <input type="date" id="bday" name="bday">
-  </div>
+	<p>
+
+	<div style="color:red; font-weight: boldest" th:if="${not #lists.isEmpty(errors)}">
+			<p th:each="error: ${errors}" th:text="${error}">
+			</p>
+	 </div>
+	<table align="center">
+		<tr>
+		<th>
+					<p>Departures</p>
+					<select name="originId">
+						<option value="">--Please select one--</option>
+						<option th:each="departure: ${departures} " th:text="${departure.name}"
+							th:value="${departure.id}" th:selected="${parameters != null && #strings.equals(parameters.get('originId'), departure.id)}"></option>
+					</select>
+			</th>
+			<th>
+				</p>
+					<p>Destination</p>
+					<select name="destinationId">
+						<option value="">--Please select one--</option>
+						<option th:each="departure: ${departures} " th:text="${departure.name}"
+							th:value="${departure.id}" th:selected="${parameters != null && #strings.equals(parameters.get('destinationId'), departure.id)}"></option>
+					</select>
+			</th>
+			<th>
+				<p>Departure Date</p>
+					<input type="date" name="bdaytime">
+			</th>
+			<th>
+				<p>Return Date</p>
+					<input type="date" name="bdaytime">
+			</th>
+		<tr>
+			<table align="center">
+				<tr>
+					<th width="50%"></th>
+					<th>
+							<input type="checkbox" name="roundtrip" value="typeTrip">
+							Roundtrip
+					</th>
+				</tr>
+			</table>
+			<div align='center'>
+				<input type="submit" value="Search"/>
+			</div>
 </form>
-</th>
-<th>
-<p>Return Date</p>
-<form>
-  <div>
-    <label for="bday"></label>
-    <input type="date" id="bday" name="bday">
-  </div>
-</form>
-</th>
-<tr>
-<table align="center">
-<tr>
-<th width="50%">
-</th> 
-<th>
-<p>roundtrip</p>
-<input type="checkbox" name="roundtrip" value="typeTrip">
-</th>
-</tr>
-</table>
-<div align='center' >
-		    <button class='btn-bot'><a href="GoingBack">Search</a></button>
-		</div>	
-</body>	
+
+</body>
 </html>

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.drakkar.service.DiscountService;
 
 @Controller
-public class WelcomeController {
+public class TestController {
 
 	@Autowired
 	private DiscountService service;
