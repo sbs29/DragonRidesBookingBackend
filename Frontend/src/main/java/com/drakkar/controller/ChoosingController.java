@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ChoosingController {
-	@RequestMapping("/ChoosePage")
+	@RequestMapping("/Choosing")
 	public String CHoosing(Map<String, Object>model) {
 		return "Choosing";
 	}
