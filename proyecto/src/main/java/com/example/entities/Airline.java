@@ -26,11 +26,11 @@ public class Airline extends AbstractEntity {
 		return super.getId();
 	}
 
-	public String getAilineName() {
+	public String getAirlineName() {
 		return airlineName;
 	}
 
-	public void setAilineName(String airlineName) {
+	public void setAirlineName(String airlineName) {
 		this.airlineName = airlineName;
 	}
 
