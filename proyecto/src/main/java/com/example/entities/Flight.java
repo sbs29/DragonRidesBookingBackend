@@ -1,8 +1,6 @@
 package com.example.entities;
 
 import java.sql.Date;
-import java.sql.Time;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,9 +18,6 @@ public class Flight extends AbstractEntity {
 	@Column
 	private Date arrivalDate;
 
-	@Column
-	private Time arrivalTime;
-
 	private Destination destination;
 
 	private Destination origin;
@@ -31,16 +26,13 @@ public class Flight extends AbstractEntity {
 	private Date departureDate;
 
 	@Column
-	private Time departureTime;
-
-	@Column
 	private double price;
 
 	public Flight() {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
 		return super.getId();
 	}
@@ -62,14 +54,6 @@ public class Flight extends AbstractEntity {
 		this.arrivalDate = arrivalDate;
 	}
 
-	public Time getArrivalTime() {
-		return arrivalTime;
-	}
-
-	public void setArrivalTime(Time arrivalTime) {
-		this.arrivalTime = arrivalTime;
-	}
-
 	@ManyToOne
 	public Destination getDestination() {
 		return destination;
@@ -85,14 +69,6 @@ public class Flight extends AbstractEntity {
 
 	public void setDepartureDate(Date departureDate) {
 		this.departureDate = departureDate;
-	}
-
-	public Time getDepartureTime() {
-		return departureTime;
-	}
-
-	public void setDepartureTime(Time departureTime) {
-		this.departureTime = departureTime;
 	}
 
 	public double getPrice() {
