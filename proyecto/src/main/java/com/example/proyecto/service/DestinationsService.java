@@ -18,8 +18,8 @@ public class DestinationsService extends AbstractService<com.example.drakkar.mod
 
 	}
 
-	public List<Flight> getFlightsByOriginOrderByPriceAsc(Long originId) {
-		return ((DestinationsRepository) getRepository()).getFlightsByOriginOrderByPriceAsc(originId);
+	public List<Flight> getFlightsByOriginOrderByPriceAsc(Long originId, Long destinationId) {
+		return ((DestinationsRepository) getRepository()).getFlightsByOriginOrderByPriceAsc(originId, destinationId);
 	}
 
 
