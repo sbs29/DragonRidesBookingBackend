@@ -23,6 +23,22 @@ public class Discount extends AbstractEntity{
 	@Column
 	private Date enddate;
 	
+	public Date getStartdate() {
+		return startdate;
+	}
+
+	public void setStartdate(Date startdate) {
+		this.startdate = startdate;
+	}
+
+	public Date getEnddate() {
+		return enddate;
+	}
+
+	public void setEnddate(Date enddate) {
+		this.enddate = enddate;
+	}
+
 	public Discount() {}
 
 	@Id
@@ -31,21 +47,7 @@ public class Discount extends AbstractEntity{
 		return super.getId();
 	}
 
-	public Date getStartDate() {
-		return startdate;
-	}
-
-	public void setStartDate(Date date) {
-		this.startdate = date;
-	}
 	
-	public Date getEndDate() {
-		return enddate;
-	}
-
-	public void setEndDate(Date date) {
-		this.enddate = date;
-	}
 
 	@ManyToOne
 	public Destination getDestination() {
