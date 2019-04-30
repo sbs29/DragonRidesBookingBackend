@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.entities.Destination;
+import com.example.drakkar.model.Flight;
 import com.example.proyecto.service.DestinationsService;
 
 @Controller
 @RequestMapping("/destination")
-public class DestinationsController extends AbstractController<Destination>{
+public class DestinationsController extends AbstractController<com.example.drakkar.model.Destination>{
 
 	@Autowired
 	public void setDestinationsService(DestinationsService service) {
@@ -24,10 +24,10 @@ public class DestinationsController extends AbstractController<Destination>{
 	@ResponseBody
 	@RequestMapping(method = RequestMethod.GET, path = "{id}/destination")
 	
-	public List<Destination> getDestinationsByOrigin(@PathVariable("id") Long originId) {
-		return ((DestinationsService) getService()).getDestinationsByOrigin(originId);
+	public List<Flight> getFlightsByOriginOrderByPriceAsc(@PathVariable("id") Long originId) {
+		return ((DestinationsService) getService()).getFlightsByOriginOrderByPriceAsc(originId);
 	}
-	
+
 
 
 }

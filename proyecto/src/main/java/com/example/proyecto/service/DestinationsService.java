@@ -6,21 +6,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
-import com.example.entities.Destination;
+import com.example.drakkar.model.Flight;
 import com.example.proyecto.repository.DestinationsRepository;
 
 @Service
-public class DestinationsService extends AbstractService<Destination> {
+public class DestinationsService extends AbstractService<com.example.drakkar.model.Destination> {
 
 	@Autowired
 	public void setDestinationRepository(DestinationsRepository destinationRepository) {
-		super.setRepository((CrudRepository<Destination, Long>) destinationRepository);
+		super.setRepository((CrudRepository<com.example.drakkar.model.Destination, Long>) destinationRepository);
 
 	}
 
-	public List<Destination> getDestinationsByOrigin(Long originId) {
-		return ((DestinationsRepository) getRepository()).getDestinationsByOrigin(originId);
+	public List<Flight> getFlightsByOriginOrderByPriceAsc(Long originId) {
+		return ((DestinationsRepository) getRepository()).getFlightsByOriginOrderByPriceAsc(originId);
 	}
-	
+
 
 }

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<table>
+		<tbody>
+			<tr th:each="discount: ${discounts}">
+				<td th:text="${discount.city}" />
+				<td th:text="${discount.discount}" />
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
