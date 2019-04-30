@@ -18,9 +18,9 @@ public class Flight extends AbstractEntity {
 	@Column
 	private Date arrivalDate;
 
-	private Destination destination;
-
 	private Destination origin;
+
+	private Destination destination;
 
 	@Column
 	private Date departureDate;
