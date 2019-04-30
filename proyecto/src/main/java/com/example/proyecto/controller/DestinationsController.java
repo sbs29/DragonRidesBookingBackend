@@ -2,6 +2,8 @@ package com.example.proyecto.controller;
 
 import java.util.List;
 
+import javax.print.attribute.standard.Destination;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +17,7 @@ import com.example.proyecto.service.DestinationsService;
 
 @Controller
 @RequestMapping("/destination")
-public class DestinationsController extends AbstractController<Destination>{
+public class DestinationsController extends AbstractController<com.example.drakkar.model.Destination>{
 
 	@Autowired
 	public void setDestinationsService(DestinationsService service) {
@@ -28,7 +30,7 @@ public class DestinationsController extends AbstractController<Destination>{
 	public List<Flight> getFlightsByOriginOrderByPriceAsc(@PathVariable("id") Long originId) {
 		return ((DestinationsService) getService()).getFlightsByOriginOrderByPriceAsc(originId);
 	}
-	
+
 
 
 }

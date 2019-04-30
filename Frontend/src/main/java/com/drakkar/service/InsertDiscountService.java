@@ -7,7 +7,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.drakkar.domain.Discount;
+import com.example.drakkar.model.Discount;
 
 public class InsertDiscountService {
 
