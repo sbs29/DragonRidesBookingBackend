@@ -1,4 +1,4 @@
-package com.example.entities;
+package com.example.drakkar.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

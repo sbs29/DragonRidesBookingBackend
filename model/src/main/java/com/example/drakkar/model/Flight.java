@@ -1,4 +1,4 @@
-package com.example.entities;
+package com.example.drakkar.model;
 
 import java.sql.Date;
 import java.sql.Time;

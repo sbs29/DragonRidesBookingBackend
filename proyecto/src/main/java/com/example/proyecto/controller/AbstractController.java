@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.entities.AbstractEntity;
+import com.example.drakkar.model.AbstractEntity;
 import com.example.proyecto.service.AbstractService;
 
 public abstract class AbstractController<E extends AbstractEntity> {

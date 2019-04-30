@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.entities.Booking;
+import com.example.drakkar.model.Booking;
 import com.example.proyecto.service.BookingService;
 
 @Controller
