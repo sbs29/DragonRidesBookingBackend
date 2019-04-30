@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.example.entities.Destination;
+import com.example.entities.Flight;
 import com.example.proyecto.service.DestinationsService;
 
 @Controller
@@ -24,9 +26,9 @@ public class DestinationsController extends AbstractController<com.example.drakk
 
 	@ResponseBody
 	@RequestMapping(method = RequestMethod.GET, path = "{id}/destination")
-
-	public List<Destination> getDestinationsByOriginOrderByPriceAsc(@PathVariable("id") Long originId) {
-		return ((DestinationsService) getService()).getDestinationsByOriginOrderByPriceAsc(originId);
+	
+	public List<Flight> getFlightsByOriginOrderByPriceAsc(@PathVariable("id") Long originId) {
+		return ((DestinationsService) getService()).getFlightsByOriginOrderByPriceAsc(originId);
 	}
 
 

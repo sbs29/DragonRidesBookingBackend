@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
+import com.example.entities.Destination;
+import com.example.entities.Flight;
 import com.example.proyecto.repository.DestinationsRepository;
 
 @Service
@@ -19,8 +21,8 @@ public class DestinationsService extends AbstractService<com.example.drakkar.mod
 
 	}
 
-	public List<Destination> getDestinationsByOriginOrderByPriceAsc(Long originId) {
-		return ((DestinationsRepository) getRepository()).getDestinationsByOriginOrderByPriceAsc(originId);
+	public List<Flight> getFlightsByOriginOrderByPriceAsc(Long originId) {
+		return ((DestinationsRepository) getRepository()).getFlightsByOriginOrderByPriceAsc(originId);
 	}
 
 
