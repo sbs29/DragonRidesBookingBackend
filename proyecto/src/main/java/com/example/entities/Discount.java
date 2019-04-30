@@ -10,15 +10,36 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Discount extends AbstractEntity {
+public class Discount extends AbstractEntity{
+
 
 	private static final long serialVersionUID = 1L;
-
+	
 	private Destination destination;
 	@Column
 	private Long percentage;
 	@Column
-	private Date date;
+	private Date startdate;
+	@Column
+	private Date enddate;
+	
+	public Date getStartdate() {
+		return startdate;
+	}
+
+	public void setStartdate(Date startdate) {
+		this.startdate = startdate;
+	}
+
+	public Date getEnddate() {
+		return enddate;
+	}
+
+	public void setEnddate(Date enddate) {
+		this.enddate = enddate;
+	}
+
+	public Discount() {}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,29 +47,20 @@ public class Discount extends AbstractEntity {
 		return super.getId();
 	}
 
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
+	
 
 	@ManyToOne
 	public Destination getDestination() {
 		return destination;
 	}
-
 	public void setDestination(Destination destination) {
 		this.destination = destination;
 	}
-
+	
 	public Long getPercentage() {
 		return percentage;
 	}
-
 	public void setPercentage(Long percentage) {
 		this.percentage = percentage;
 	}
-
 }
