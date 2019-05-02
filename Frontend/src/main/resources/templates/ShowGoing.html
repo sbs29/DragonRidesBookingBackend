@@ -24,21 +24,23 @@
 				<th> ARRIVAL TIME </th>
 			</tr>
 
-			<tr>
-				<td></td>
+		 <tr th:each="Flights : ${Flights}">
 
-				<td></td>
+    <td th:text="${Flight.airline}"></td>
 
-				<td></td>
+    <td th:text="${Flight.origin}" ></td>
+
+    <td th:text="${Flight.destination}"></td>
 	
-				<td></td>
+	<td th:text="${Flight.departureDate}"></td>
 	
-				<td></td>
-				
-				<td></td>
-				
-				<td></td>
-			</tr>
+	<td th:text="${Flight.departureTime}"></td>
+	
+	<td th:text="${Flight.arrivalDate}"></td>
+	
+	<td th:text="${Flight.arrivalTime}"></td>
+
+  </tr>
 		</table>
 	</p>
 	<br>

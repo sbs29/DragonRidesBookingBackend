@@ -22,24 +22,24 @@
 	<br>
 	<p>
 		<table align = 'center' border = 5>
-			<tr th:each="booking: ${bookings}">
-				<th th:text="${}"> FLIGHT ID </th>
+			<tr>
+				<th> FLIGHT ID </th>
 				
-				<th th:text="${}"> AIRLINE </th>
+				<th> AIRLINE </th>
 	
-				<th th:text="${}"> ORIGIN </th>
+				<th> ORIGIN </th>
 	
-				<th th:text="${}"> DESTINATION </th>
+				<th> DESTINATION </th>
 
-				<th th:text="${}"> DEPARTURE DATE </th>
+				<th> DEPARTURE DATE </th>
 				
-				<th th:text="${}"> DEPARTURE TIME </th>
+				<th> DEPARTURE TIME </th>
 
-				<th th:text="${}"> ARRIVAL DATE </th>
+				<th> ARRIVAL DATE </th>
 				
-				<th th:text="${}"> ARRIVAL TIME </th>
+				<th> ARRIVAL TIME </th>
 				
-				<th th:text="${}"> OFFER </th>
+				<th> OFFER </th>
 			</tr>
 			<tr th:each="Flights : ${Flights}">
 				
@@ -55,9 +55,9 @@
 				
 				<td th:text="${Flight.departureTime}"></td>
 				
-				<td> th:text="${Flight.arrivalDate</td>
+				<td> th:text="${Flight.arrivalDate}"</td>
 				
-				<td> th:text="${Flight.arrivalTime</td>
+				<td> th:text="${Flight.arrivalTime}"</td>
 				
 				<td th:text="${></td>
 			</tr>
