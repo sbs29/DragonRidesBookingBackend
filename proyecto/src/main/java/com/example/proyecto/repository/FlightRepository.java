@@ -15,7 +15,9 @@ import com.example.drakkar.model.Flight;
 public interface FlightRepository extends CrudRepository<Flight, Long>{
 
 	@Query("select f from Flight as f where f.origin.id = :originId and f.destination.id = :destinationId and "
-			+ "f.arrivalDate > :fromArrivalDate and f.arrivalDate < :toArrivalDate")
+			+ "f.arrivalDate > :fromArrivalDate and f.arrivalDate < :toArrivalDate and "
+			+ "f.departureDate > :fromDepartureDate and f.departureDate < :toDepartureDate")
 	List<Flight> getFlightOrderByPrice(@Param("originId") Long originId, @Param("destinationId")Long destinationId,
-			@Param("fromArrivalDate") Date fromArrivalDate,@Param("toArrivalDate") Date toArrivalDate);
+			@Param("fromArrivalDate") Date fromArrivalDate, @Param("toArrivalDate") Date toArrivalDate,
+			@Param("fromDepartureDate") Date fromDepartureDate, @Param("toDepartureDate") Date toDepartureDate);
 }

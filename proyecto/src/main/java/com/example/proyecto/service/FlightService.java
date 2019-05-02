@@ -1,6 +1,5 @@
 package com.example.proyecto.service;
 
-
 import java.sql.Date;
 import java.util.List;
 
@@ -18,8 +17,10 @@ public class FlightService extends AbstractService<Flight> {
 	public void setFlightRepository(FlightRepository flightRepository) {
 		super.setRepository((CrudRepository<Flight, Long>) flightRepository);
 	}
-	
-	public List<Flight> getFlightOrderByPrice(Long originId, Long destinationId, Date fromArrivalDate, Date toArrivalDate) {
-		return ((FlightRepository) getRepository()).getFlightOrderByPrice(originId, destinationId, fromArrivalDate, toArrivalDate);
+
+	public List<Flight> getFlightOrderByPrice(Long originId, Long destinationId, Date fromArrivalDate,
+			Date toArrivalDate, Date fromDepartureDate, Date toDepartureDate) {
+		return ((FlightRepository) getRepository()).getFlightOrderByPrice(originId, destinationId, fromArrivalDate,
+				toArrivalDate, fromDepartureDate, toDepartureDate);
 	}
 }
