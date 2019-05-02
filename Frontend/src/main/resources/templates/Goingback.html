@@ -4,7 +4,7 @@
 <link href="estilos/estilos.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTUnI0DSwnGUJw8A2fGVOoCPcYHY45fTgRhPZtlZowPpKU4VwBg" 
+<body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTUnI0DSwnGUJw8A2fGVOoCPcYHY45fTgRhPZtlZowPpKU4VwBg" style="color:#FFFFFF"
 width="500" height="500"/>
 
 
@@ -17,7 +17,7 @@ width="500" height="500"/>
 
     <th>DepartureDate</th>
 
-    <th>DepartureTme</th>
+    <th>DepartureTime</th>
 	
 	<th>ArrivalDate</th>
 	
@@ -29,67 +29,21 @@ width="500" height="500"/>
   
     <tr>
 
-    <td></td>
+    <td th:text="${Flight.airline}"></td>
 
-    <td></td>
+    <td th:text="${Flight.departureDate}"></td>
 
-    <td></td>
+    <td th:text="${Flight.departureTime}"></td>
 	
-	<td></td>
+	<td th:text="${Flight.arrivalDate}"></td>
 	
-	<td></td>
+	<td th:text="${Flight.arrivalTime}"></td>
 	
-	<td></td>
+	<td th:text="${Flight.destination}"></td>
 
   </tr>
 
-  <tr>
 
-    <td></td>
-
-    <td></td>
-
-    <td></td>
-	
-	<td></td>
-	
-	<td></td>
-	
-	<td></td>
-
-  </tr>
-
-  <tr>
-
-    <td></td>
-
-    <td></td>
-	
-	<td></td>
-	
-	<td></td>
-	
-	<td></td>
-	
-	<td></td>
-
-  </tr>
-
-  <tr>
-
-    <td></td>
-
-    <td></td>
-	
-	<td></td>
-	
-	<td></td>
-	
-	<td></td>
-	
-	<td></td>
-
-  </tr>
 
 </table>
 	<table border="1" style="margin: 0 auto;">	
@@ -100,7 +54,7 @@ width="500" height="500"/>
 
 		<th>DepartureDate</th>
 
-		<th>DepartureTme</th>
+		<th>DepartureTime</th>
 		
 		<th>ArrivalDate</th>
 		
@@ -112,71 +66,26 @@ width="500" height="500"/>
 	  
 		<tr>
 
-		<td></td>
+		<td th:text="${Flight.airline}"></td>
 
-		<td></td>
+		<td th:text="${Flight.departureDate}"></td>
 
-		<td></td>
+		<td th:text="${Flight.departureTime}"></td>
 		
-		<td></td>
+		<td th:text="${Flight.arrivalDate}"></td>
 		
-		<td></td>
+		<td th:text="${Flight.arrivalTime}"></td>
 		
-		<td></td>
+		<td th:text="${Flight.destination}"></td>
 
 	  </tr>
 
-	  <tr>
 
-		<td></td>
 
-		<td></td>
-
-		<td></td>
-		
-		<td></td>
-		
-		<td></td>
-		
-		<td></td>
-
-	  </tr>
-
-	  <tr>
-
-		<td></td>
-
-		<td></td>
-		
-		<td></td>
-		
-		<td></td>
-		
-		<td></td>
-		
-		<td></td>
-
-	  </tr>
-
-	  <tr>
-
-		<td></td>
-
-		<td></td>
-		
-		<td></td>
-		
-		<td></td>
-		
-		<td></td>
-		
-		<td></td>
-
-	  </tr>
 
 	</table>
 	<form>
-  <input type = "button" value = "Volver" style="text-align:center" onclick = "Search()">
+  <input type = "button" value = "Back" style="text-align:center" onclick = "Search()">
 </form>
 <script language="JavaScript"> 
 function Search(){ 
