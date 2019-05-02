@@ -9,8 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.drakkar.domain.Destination;
 import com.drakkar.service.DestinationService;
+import com.example.drakkar.model.Destination;
 
 @Controller
 public class SearchController {

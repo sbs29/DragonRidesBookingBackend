@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.entities.AbstractEntity;
+import com.example.drakkar.model.AbstractEntity;
 
 public abstract class AbstractService <E extends AbstractEntity> {
 

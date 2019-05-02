@@ -60,19 +60,19 @@
   <h2 align='center'> FLIGHTS </h2>
   <p text="Insert "><table align = "center" border = 5>
 
-  <tr>
+  <tr  th:each="flight: ${flights}">
 	
-	<th> ID </th>
+	<th th:text="${flight.id}"> ID </th>
 	
-    <th> AIRLINE </th>
+    <th th:text="${flight.airline}"> AIRLINE </th>
 	
-	<th> ORIGIN </th>
+	<th th:text="${flight.origin}"> ORIGIN </th>
 	
-	<th> DESTINATION</th>
+	<th th:text="${flight.destination}"> DESTINATION</th>
 
-    <th> DEPARTURE DATE </th>
+    <th th:text="${flight.departureDate}"> DEPARTURE DATE </th>
 
-	<th> ARRIVAL DATE </th>
+	<th th:text="${flight.arrivalDate}"> ARRIVAL DATE </th>
 	
 
   </tr>
