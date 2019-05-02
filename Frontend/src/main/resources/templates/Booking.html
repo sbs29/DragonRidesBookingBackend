@@ -14,7 +14,7 @@
 			</tr>
 		
 			<tr>
-				<td> Bombergio </td>
+				<td th:text="${User.user}"> </td>
 			</tr>
 		</table>
 	</p>
@@ -41,24 +41,25 @@
 				
 				<th> OFFER </th>
 			</tr>
-			<tr>
-				<td><input type="text" name="id" DISABLED></td>
+			<tr th:each="Flights : ${Flights}">
 				
-				<td><input type="text" name="airline" DISABLED></td>
+				<td th:text="${Booking.id}"></td>
 				
-				<td><input type="text" name="origin" DISABLED></td>
+				<td th:text="${Flight.airline}"></td>
 				
-				<td><input type="text" name="destination" DISABLED></td>
+				<td th:text="${Flight.origin}"{></td>
 				
-				<td><input type="text" name="ddate" DISABLED size="30"></td>
+				<td th:text="${Flight.destination}"></td>
 				
-				<td><input type="text" name="dtime" DISABLED></td>
+				<td th:text="${Flight.departureDate}"></td>
 				
-				<td><input type="text" name="adate" DISABLED size="25"></td>
+				<td th:text="${Flight.departureTime}"></td>
 				
-				<td><input type="text" name="atime" DISABLED></td>
+				<td> th:text="${Flight.arrivalDate</td>
 				
-				<td><input type="text" name="offer" DISABLED></td>
+				<td> th:text="${Flight.arrivalTime</td>
+				
+				<td th:text="${></td>
 			</tr>
 		</table>
 	</p>
