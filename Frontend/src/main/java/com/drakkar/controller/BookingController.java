@@ -24,7 +24,7 @@ public class BookingController {
 		return "Booking";
 	}
 
-	@RequestMapping(method = RequestMethod.POST, consumes = {"application/x-www-form-urlencoded;charset=UTF-8"})
+	@RequestMapping(method = RequestMethod.POST, consumes = {"application/x-www-form-urlencoded;charset=UTF-8", "application/json"})
 	public String create(BookingForm form, Map<String, Object> model) {
 		//TODO validate the form!!!!!
 
