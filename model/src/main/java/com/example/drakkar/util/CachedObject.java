@@ -6,20 +6,20 @@ public class CachedObject<T> implements Supplier<T>, Wipeable {
 
 	private final long ttl;
 	private long lastTimeUpdated = Long.MIN_VALUE;
-	private final Supplier<T> getter;
+	private final Supplier<T> supplier;
 
 	private T cached;
 
 	public CachedObject(long timeToLiveInMillis, Supplier<T> getter) {
 		this.ttl = timeToLiveInMillis;
-		this.getter = getter;
+		this.supplier = getter;
 	}
 
 	@Override
 	public T get() {
 		long now = System.currentTimeMillis();
 		if (cached == null || now - lastTimeUpdated > ttl) {
-			cached = getter.get();
+			cached = supplier.get();
 			lastTimeUpdated = System.currentTimeMillis();
 		}
 		return cached;
