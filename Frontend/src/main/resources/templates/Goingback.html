@@ -10,8 +10,15 @@ width="500" height="500"/>
 
 <table border="1" style="margin: 0 auto;">
 
-<caption align="top">Ida.</caption>
+<<<<<<< HEAD
+<caption align="top">Ida y Vuelta.</caption>
   <tr >
+=======
+<caption align="top">Ida.</caption>
+  <tr  th:each="GoingBack: ${GoingBack}" >
+  
+  	<th>Buy</th>
+>>>>>>> 4e79f9b00e9b7609a8cf7771b8e8461691b57962
 
     <th >Airline</th>
 
@@ -27,8 +34,15 @@ width="500" height="500"/>
 	
   </tr>
   
+<<<<<<< HEAD
     <tr>
+	
+=======
+    <tr  th:each="GoingBack: ${GoingBack}">
+    
+    <td><input type="radio" name="Buy" value="Buy"> Buy</td>
 
+>>>>>>> 4e79f9b00e9b7609a8cf7771b8e8461691b57962
     <td th:text="${Flight.airline}"></td>
 
     <td th:text="${Flight.departureDate}"></td>
@@ -42,13 +56,31 @@ width="500" height="500"/>
 	<td th:text="${Flight.destination}"></td>
 
   </tr>
+  
+ 
+  <tr>
+	
+    <td th:text="${Flight.airline}"></td>
 
+    <td th:text="${Flight.departureDate}"></td>
 
+    <td th:text="${Flight.departureTime}"></td>
+	
+	<td th:text="${Flight.arrivalDate}"></td>
+	
+	<td th:text="${Flight.arrivalTime}"></td>
+	
+	<td th:text="${Flight.destination}"></td>
 
+<<<<<<< HEAD
+  </tr>
+=======
 </table>
 	<table border="1" style="margin: 0 auto;">	
 	<caption align="top">Vuelta.<font size="20"></caption>
 		<tr>
+		
+		<th>Buy</th>
 
 		<th>Airline</th>
 
@@ -65,6 +97,8 @@ width="500" height="500"/>
 	  </tr>
 	  
 		<tr>
+		
+		<td><input type="radio" name="Buy" value="Buy">Buy</td>
 
 		<td th:text="${Flight.airline}"></td>
 
@@ -84,8 +118,10 @@ width="500" height="500"/>
 
 
 	</table>
+>>>>>>> 4e79f9b00e9b7609a8cf7771b8e8461691b57962
 	<form>
   <input type = "button" value = "Back" style="text-align:center" onclick = "Search()">
+   <input type = "button" value = "Buy" style="text-align:center" onclick = "Search()">
 </form>
 <script language="JavaScript"> 
 function Search(){ 
