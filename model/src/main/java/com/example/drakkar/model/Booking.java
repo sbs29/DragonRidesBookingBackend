@@ -12,11 +12,13 @@ public class Booking extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 
 	private Flight flight;
+	private Discount discount;
 
 	private User user;
 
 	private Booking(Builder builder) {
 		this.flight = builder.flight;
+		this.discount = builder.discount;
 		this.user = builder.user;
 	}
 
@@ -47,6 +49,14 @@ public class Booking extends AbstractEntity {
 		this.user = user;
 	}
 
+	public Discount getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(Discount discount) {
+		this.discount = discount;
+	}
+
 	/**
 	 * Creates builder to build {@link Booking}.
 	 * @return created builder
@@ -60,6 +70,7 @@ public class Booking extends AbstractEntity {
 	 */
 	public static final class Builder {
 		private Flight flight;
+		private Discount discount;
 		private User user;
 
 		private Builder() {
@@ -67,6 +78,11 @@ public class Booking extends AbstractEntity {
 
 		public Builder withFlight(Flight flight) {
 			this.flight = flight;
+			return this;
+		}
+
+		public Builder withDiscount(Discount discount) {
+			this.discount = discount;
 			return this;
 		}
 
@@ -79,4 +95,5 @@ public class Booking extends AbstractEntity {
 			return new Booking(this);
 		}
 	}
+
 }
