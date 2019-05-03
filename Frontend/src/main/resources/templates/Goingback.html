@@ -11,7 +11,9 @@ width="500" height="500"/>
 <table border="1" style="margin: 0 auto;">
 
 <caption align="top">Ida.</caption>
-  <tr >
+  <tr  th:each="GoingBack: ${GoingBack}" >
+  
+  	<th>Buy</th>
 
     <th >Airline</th>
 
@@ -27,7 +29,9 @@ width="500" height="500"/>
 	
   </tr>
   
-    <tr>
+    <tr  th:each="GoingBack: ${GoingBack}">
+    
+    <td><input type="radio" name="Buy" value="Buy"> Buy</td>
 
     <td th:text="${Flight.airline}"></td>
 
@@ -49,6 +53,8 @@ width="500" height="500"/>
 	<table border="1" style="margin: 0 auto;">	
 	<caption align="top">Vuelta.<font size="20"></caption>
 		<tr>
+		
+		<th>Buy</th>
 
 		<th>Airline</th>
 
@@ -65,6 +71,8 @@ width="500" height="500"/>
 	  </tr>
 	  
 		<tr>
+		
+		<td><input type="radio" name="Buy" value="Buy">Buy</td>
 
 		<td th:text="${Flight.airline}"></td>
 
@@ -86,6 +94,7 @@ width="500" height="500"/>
 	</table>
 	<form>
   <input type = "button" value = "Back" style="text-align:center" onclick = "Search()">
+   <input type = "button" value = "Buy" style="text-align:center" onclick = "Search()">
 </form>
 <script language="JavaScript"> 
 function Search(){ 

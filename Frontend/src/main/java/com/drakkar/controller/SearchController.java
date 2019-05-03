@@ -53,7 +53,8 @@ public class SearchController {
 		if (errors.isEmpty()) {
 			//TODO search and forward to search results page
 			// flightCriteria or flight must be created an populated
-			//model.put("flights", flightService.search(flightCriteria));
+			//model.put("flights", flightService.search(flightCriteria))
+			
 			return "TODO search result page name goes here!";
 		} else {
 			model.put("errors", errors);
