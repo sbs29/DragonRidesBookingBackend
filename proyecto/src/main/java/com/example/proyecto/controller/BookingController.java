@@ -23,7 +23,7 @@ public class BookingController extends AbstractController<Booking> {
 	@ResponseBody
 	@RequestMapping(method = RequestMethod.POST, path = "create")
 	public Booking create(@RequestBody BookingMetaInfo bookingMeta) {
-		System.out.println("created " + bookingMeta.getFlightId() + ", " + bookingMeta.getUserId());
+//		System.out.println("created " + bookingMeta.getFlightId() + ", " + bookingMeta.getUserId());
 		//TODO ...
 		return Booking.builder()
 				.withFlight(Flight.builder()

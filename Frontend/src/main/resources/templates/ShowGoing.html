@@ -8,7 +8,10 @@
 	<br>
 	<p>
 		<table align = "center" border = 5 style="color:#FFFFFF">
-			<tr>
+			<tr th:each="ShowGoing: ${ShowGoing}">
+			
+				<th>Buy</th>
+			
 				<th> AIRLINE </th>
 	
 				<th> ORIGIN </th>
@@ -24,7 +27,10 @@
 				<th> ARRIVAL TIME </th>
 			</tr>
 
-			<tr>
+			<tr th:each="ShowGoing: ${ShowGoing}">
+			
+				<td><input type="radio" name="buy" value="buy"> buy</td>
+				
 				<td></td>
 
 				<td></td>
@@ -46,6 +52,7 @@
 	<br>
 	<div  align='center'>
 			<button style="color:#FFFFF"> GO BACK </button> 
+			 <input type = "button" value = "Buy" style="text-align:center" onclick = "Search()">
 	</div>
 	
   </body>
