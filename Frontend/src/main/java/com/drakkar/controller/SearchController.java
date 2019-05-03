@@ -10,18 +10,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.drakkar.service.DestinationService;
+import com.drakkar.service.SearchService;
 import com.example.drakkar.model.Destination;
+import com.example.drakkar.vo.FlightSearchResult;
 
 @Controller
 public class SearchController {
 
 	@Autowired
 	private DestinationService destinationService;
+	@Autowired
+	private SearchService searchService;
 
 	// TODO whereTF is the flight service?!?!?!?!?!
 //	@Autowired
 //	private FlightService flightService;
-
 
 	@RequestMapping("/")
 	public String doShowView(Map<String, Object> model) {
@@ -44,17 +47,30 @@ public class SearchController {
 		if (null == originId || "".equals(originId)) {
 			errors.add("You must select an origin!");
 		}
+
 		String destinationId = parameters.get("destinationId");
 		if (null == destinationId || "".equals(destinationId)) {
 			errors.add("You must select a destination!");
 		}
-		//TODO more errors when missing departure date and return date
+
+		String departureDate = parameters.get("departureDate");
+		if (null == departureDate || "".equals(departureDate)) {
+			errors.add("You must select a departureDate!");
+		}
+
+		String arrivalDate = parameters.get("arrivalDate");
+		if (null == arrivalDate || "".equals(arrivalDate)) {
+			errors.add("You must select a arrivalDate!");
+		}
 
 		if (errors.isEmpty()) {
-			//TODO search and forward to search results page
+			// TODO search and forward to search results page
 			// flightCriteria or flight must be created an populated
-			//model.put("flights", flightService.search(flightCriteria))
-			
+			// model.put("flights", flightService.search(flightCriteria))
+			List<FlightSearchResult> flight = searchService.flight(Long.valueOf(originId), Long.valueOf(destinationId),
+					departureDate, arrivalDate);
+			model.put(destinationId, originId);
+
 			return "TODO search result page name goes here!";
 		} else {
 			model.put("errors", errors);
